@@ -18,7 +18,6 @@ public class Person {
     }
 
     public Person(int age) {
-        this.name = "";
         this.age = age;
     }
 
@@ -51,6 +50,25 @@ public class Person {
         this.gender=gender;
         this.citizen = citizen;
         this.phoneNumber = phoneNumber;
+    }
+
+    public Person(String name, int age, String gender, boolean citizen, int phoneNumber, boolean lookingForWork) {
+        this.name = name;
+        this.age = age;
+        this.gender=gender;
+        this.citizen = citizen;
+        this.phoneNumber = phoneNumber;
+        this.lookingForWork = lookingForWork;
+    }
+
+    public Person(String name, int age, String gender, boolean citizen, int phoneNumber, boolean lookingForWork, String educationLevel) {
+        this.name = name;
+        this.age = age;
+        this.gender=gender;
+        this.citizen = citizen;
+        this.phoneNumber = phoneNumber;
+        this.lookingForWork = lookingForWork;
+        this.educationLevel = educationLevel;
     }
 
     public void setName(String name) {

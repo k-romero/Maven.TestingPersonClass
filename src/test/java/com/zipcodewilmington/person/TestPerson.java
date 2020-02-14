@@ -95,4 +95,115 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetFullDetailsName() {
+        // Given
+        String expected = "Kevin";
+        int age = 31;
+        String gender = "M";
+        boolean citizen = true;
+        int phoneNumber = 3025555;
+        boolean lookingForWork = true;
+        String educationLevel = "Zipcode";
+
+        //Instantiate new person
+        Person person = new Person(expected, age, gender, citizen,phoneNumber,lookingForWork,educationLevel);
+
+        // When
+        person.setName(expected);
+
+        // Then
+        String actual = person.getName();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFullDetailsAge() {
+        // Given
+        String name = "Kevin";
+        int expected = 31;
+        String gender = "M";
+        boolean citizen = true;
+        int phoneNumber = 3025555;
+        boolean lookingForWork = true;
+        String educationLevel = "Zipcode";
+
+        //Instantiate new person
+        Person person = new Person(name, expected, gender, citizen,phoneNumber,lookingForWork,educationLevel);
+
+        // When
+        person.setAge(expected);
+
+        // Then
+        int actual = person.getAge();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFullDetailsGender() {
+        // Given
+        String name = "Kevin";
+        int age = 31;
+        String expected = "M";
+        boolean citizen = true;
+        int phoneNumber = 3025555;
+        boolean lookingForWork = true;
+        String educationLevel = "Zipcode";
+
+        //Instantiate new person
+        Person person = new Person(name, age, expected, citizen,phoneNumber,lookingForWork,educationLevel);
+
+        // When
+        person.setGender(expected);
+
+        // Then
+        String actual = person.getGender();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFullDetailsCitizen() {
+        // Given
+        String name = "Kevin";
+        int age = 31;
+        String gender = "M";
+        boolean expected = true;
+        int phoneNumber = 3025555;
+        boolean lookingForWork = true;
+        String educationLevel = "Zipcode";
+
+        //Instantiate new person
+        Person person = new Person(name, age, gender, expected,phoneNumber,lookingForWork,educationLevel);
+
+        // When
+        person.setCitizen(expected);
+
+        // Then
+        boolean actual = person.isCitizen();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFullDetailsPhone() {
+        // Given
+        String name = "Kevin";
+        int age = 31;
+        String gender = "M";
+        boolean citizen = true;
+        int expected = 3025555;
+        boolean lookingForWork = true;
+        String educationLevel = "Zipcode";
+
+        //Instantiate new person
+        Person person = new Person(name, age, gender, citizen, expected, lookingForWork,educationLevel);
+
+        // When
+        person.setPhoneNumber(expected);
+
+        // Then
+        boolean actual = person.isCitizen();
+        Assert.assertEquals(expected, actual);
+    }
+
 }
