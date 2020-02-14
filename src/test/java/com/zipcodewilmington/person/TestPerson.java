@@ -202,7 +202,51 @@ public class TestPerson {
         person.setPhoneNumber(expected);
 
         // Then
-        boolean actual = person.isCitizen();
+        int actual = person.getPhoneNumber();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFullDetailsLookingForWork() {
+        // Given
+        String name = "Kevin";
+        int age = 31;
+        String gender = "M";
+        boolean citizen = true;
+        int phoneNumber = 3025555;
+        boolean expected = true;
+        String educationLevel = "Zipcode";
+
+        //Instantiate new person
+        Person person = new Person(name, age, gender, citizen, phoneNumber, expected,educationLevel);
+
+        // When
+        person.setLookingForWork(expected);
+
+        // Then
+        boolean actual = person.isLookingForWork();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFullDetailsEducation() {
+        // Given
+        String name = "Kevin";
+        int age = 31;
+        String gender = "M";
+        boolean citizen = true;
+        int phoneNumber = 3025555;
+        boolean lookingForWork = true;
+        String expected = "Zipcode";
+
+        //Instantiate new person
+        Person person = new Person(name, age, gender, citizen, phoneNumber, lookingForWork,expected);
+
+        // When
+        person.setEducationLevel(expected);
+
+        // Then
+        String actual = person.getEducationLevel();
         Assert.assertEquals(expected, actual);
     }
 
